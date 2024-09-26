@@ -4,7 +4,11 @@
 // Test your function with different numbers of arguments.
 
 function subtract(...numbers) {
-  // Your code here
+  let difference = numbers[0] //first number in arr
+  for (let i = 0; i < numbers.length; i++){
+    difference -= numbers[i]
+  }
+  return difference //return the final difference
 }
 
 console.log(subtract(10, 2, 3)); // Example usage
