@@ -4,9 +4,9 @@
 
 const car = {
   brand: 'Toyota',
-  logBrand() {
-    // Your code here
+  logBrand: function() {
+    return `${this.brand}`
   }
-};
+}
 
-car.logBrand();
+console.log(car.logBrand());
