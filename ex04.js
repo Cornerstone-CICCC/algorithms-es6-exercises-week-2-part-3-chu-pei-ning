@@ -3,10 +3,19 @@
 // Test your function by calculating the sum of the array and logging the result to the console.
 
 function sumOfDigits(n) {
-    let sum = 0
-    for (let i = 0; i < n.length; i++){
-      sum = sum + n[i]
-    }
-    return sum
+  return recursive(n, 0);
 }
+
+function recursive(n, result) {
+  if (n.length === 0) {
+    return result;
+  }
+  
+  let addResult = n[n.length - 1] + result;
+
+  let newArr = n.slice(0, n.length - 1);
+  
+  return recursive(newArr, addResult);
+}
+
 console.log(sumOfDigits([1, 3, 7, 1, 8])); // 20
